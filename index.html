@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="script" href="">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbar-masking">
+                <div class="navbar-wrapper">
+                    <a href="index.html">
+                        <img src="./images/Logo White.png" alt="logo">
+                    </a>
+                    <div class="navbar-menu">
+                        <a href="menu.html">Products</a>
+                        <a href="findus.html">Store</a>
+                        <a href="help.html">Contact</a>
+                    </div>
+                </div>
+                <div class="content-navbar">
+                    <h1>Freshly Brewed Coffe & Tea</h1>
+                    <h3>Best qualities from our local soil</h3>
+                </div>
+            </div>
+        </div>
+        <script src="./js/script.js"></script>
+
+        <div class="content">
+            <div class="introduce">
+                <img src="./images/Who are we.jpg" alt="img1">
+                <div class="introduce-wrapper">
+                    <h1>Who are we?</h1>
+                    <p>We are Jakarta-based coffee and tea house
+                        focused on professionally brewing local
+                        sourced, high quality, coffee beans and
+                        tea leaves.</p>
+                </div>
+            </div> 
+
+            <script>
+                const content = document.getElementsByClassName('introduce')[0];
+                
+                window.addEventListener('scroll',function(){
+                    var position = content.getBoundingClientRect().top;
+                    var screenPosition = window.innerHeight;
+
+                    if(position<screenPosition){
+                        content.classList.add('scrollLeft');
+                    }
+                })
+
+            </script>
+
+            
+            <div class="product">
+                <div class="product-wrapper">
+                    <h1>Product Showcase?</h1>
+                    <p>Our products contain the highest quality
+                        ingredients processed with care.</p>
+                    <button class="products btn">See our coffee and tea</button>
+                </div>
+                <img src="./images/Our products.jpg" alt="img2">
+            </div> 
+            <script>
+                const product = document.getElementsByClassName('product')[0];
+                console.log(product);
+                window.addEventListener('scroll',function(){
+                    var position2 = product.getBoundingClientRect().top;
+                    var screenPosition2 = window.innerHeight;
+
+                    if(position2<screenPosition2){
+                        product.classList.add('scrollRight');
+                    }
+                })
+
+            </script>
+
+            <div class="cafe">
+                <img src="./images/Hang out with us.jpg" alt="img3">
+                <div class="cafe-wrapper">
+                    <h1>Hang out with us!</h1>
+                    <p>Our stores use sustainable  furnitures,
+                        surrounded by nature, to help our
+                        planet survive.</p>
+                    <button class="cafes btn">Find our cafes</button>
+                </div>
+            </div> 
+
+            <script>
+                const cafe= document.getElementsByClassName('cafe')[0];
+                window.addEventListener('scroll',function(){
+                    var position3 = cafe.getBoundingClientRect().top;
+                    var screenPosition3 = window.innerHeight;
+
+                    if(position3<screenPosition3){
+                       cafe.classList.add('scrollLeft');
+                    }
+                })
+
+            </script>
+
+            <div class="showcase">
+                <h1>Find us out at Instagram <a href="#">@aroma_bumi</a></h1>
+                <div class="showcase-wrapper">
+                    <img src="./images/Feed 1.png" alt="feed1">
+                    <img src="./images/Feed 2.png" alt="feed2">
+                    <img src="./images/Feed 3.png" alt="feed3">
+                    <img src="./images/Feed 4.png" alt="feed3">
+                    <img src="./images/Feed 5.png" alt="feed5">
+                    <img src="./images/Feed 6.png" alt="feed6">
+                </div>
+                
+                <h1>Ask us more!</h1>
+                <p>If you have any questions or interested to cooperate with us, kindly let us know here:</p>
+                <button class="contact btn">Contact us</button>
+            </div>
+
+            <script>
+                const showcase= document.getElementsByClassName('showcase')[0];
+                window.addEventListener('scroll',function(){
+                    var position4 = showcase.getBoundingClientRect().top;
+                    var screenPosition4 = window.innerHeight;
+
+                    if(position4<screenPosition4){
+                       showcase.classList.add('fade');
+                    }
+                })
+
+            </script>
+
+            <div class="footer">
+                <div class="logo-footer">
+                    <img class='logoo'src="./images/Logo White.png" alt="logo-footer">
+                    <div class="sub-logo-footer">
+                        <img src="./images/MAIL ICON.svg" alt="mail">
+                        <img src="./images/PHONE ICON.svg" alt="phone">
+                    </div>
+                </div>
+                <div class="products-footer">
+                    <div class="accord">
+                        <a href="#">Products</a>
+                        <p><</p>
+                    </div> 
+                    <div class="panel">
+                        <a href="#">Coffee Based</a>
+                        <a href="#">Non-Coffee</a>
+                        <a href="#">Tea Based</a>
+                    </div>
+                </div>
+
+                <div class="products-footer">
+                    <div class="accord">
+                        <a href="#">Store</a>
+                        <p><</p>
+                    </div> 
+                    
+                    <div class="panel">
+                        <a href="#">Location</a>
+                    </div>   
+                </div>
+
+                <div class="products-footer">
+                    <div class="accord">
+                        <a href="#">contact</a>
+                        <p><</p>
+                    </div> 
+                    
+                    <div class="panel">
+                        <a href="#">Customer Service</a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded",()=>{
+                    const accords = document.getElementsByClassName("accord");
+                    const panel = document.getElementsByClassName("panel");
+
+                    for(let i=0;i<accords.length;i++){
+                        accords[i].addEventListener("click",()=>{
+                        if(panel[i].style.display==="none"){
+                            panel[i].style.display="block";
+                        }else{
+                            panel[i].style.display="none";
+                        }
+                    })
+
+                    }
+
+                })
+
+
+            </script>
+
+
+        </div>
+    </body>
+</html>
